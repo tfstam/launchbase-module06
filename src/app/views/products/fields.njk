@@ -33,7 +33,7 @@
     <input type="text" name="price" placeholder="Preço do produto" value="{{ product.price }}" onkeydown="Mask.apply(this, 'formatBRL')">
   </div>
   {% if product.old_price %}
-    <input type="hidden" name="old_price" value={{old_price}}>
+    <input type="hidden" name="old_price" value="{{product.old_price}}">
   {% endif %}
 </div>
 
@@ -44,7 +44,7 @@
   </div>
 </div>
 
-{% if product.status %}
+{% if (product.status == '1') or (product.status == 0)%}
 <div class="item">
   <div>Disponível?</div>
   <div>
@@ -53,12 +53,3 @@
   </div>
 </div>
 {% endif %}
-
-
-
-
-
-
-
-
-
