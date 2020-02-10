@@ -24,7 +24,7 @@ module.exports = {
         }
     }
 
-    let results = await  Product.create(req.body)
+    let results = await Product.create(req.body)
     const productId = results.rows[0].id 
 
     return res.redirect(`/products/${productId}`)
