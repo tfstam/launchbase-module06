@@ -27,8 +27,9 @@ module.exports = {
 
       const lastAdded = await Promise.all(productsPromise)
 
-      return res.render('home/index', { products: lastAdded })
-    } catch(err) {
+      return res.render('search/index', { products: lastAdded })
+    } 
+    catch(err) {
       console.log(err)
     }
     
